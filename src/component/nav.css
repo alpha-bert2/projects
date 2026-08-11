@@ -1,0 +1,207 @@
+header{
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: white;
+    transition: box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+header.scrolled{
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+header.scrolled nav{
+    padding: 0.3rem 0;
+}
+
+nav{
+    display: flex;
+    width: min(2000px,90%);
+    margin: auto;
+    align-items: center;
+    padding: 0.4rem 0;
+    position: relative;
+}
+
+/*logo css*/
+
+.logo{
+    flex: 1;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ucook{
+    width: 2rem;
+    height: 2rem;
+}
+
+/*nav links css*/
+.navLinks{
+    flex: 1;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.naviLink{
+    text-decoration: none;
+    color: var(--second-text);
+    font-weight: 600;
+    font-family: DM sans;
+    transition: 0.5s;
+    position: relative;
+}
+
+/*naviLInk hover effect*/
+
+.naviLink::before{
+    content: "";
+    width: 0;
+    height: 3.5px;
+    position: absolute;
+    bottom:-10px;
+    left: 0;
+    background-color: var(--primary-hover);
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.naviLink:hover::before{
+    width: 100%;
+}
+
+.naviLink:hover{
+    color: var(--primary-hover);
+}
+
+.naviLink.active::before{
+    width: 100%;
+}
+
+.naviLink.active{
+    color: var(--primary-hover);
+}
+
+/*nav Button css*/
+
+.navCTA{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    gap: 0.8rem;
+}
+
+.navCTA button{
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 12px;
+    font-family: DM sans;
+    font-size: 0.975rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navCTA button:hover {
+    transform: scale(1.05);
+}
+
+.first-navCTA{
+    color: var(--dark-text);
+    background-color: var(--background);
+}
+
+.second-navCTA{
+    background-color: var(--primary);
+    color: white;
+}
+/*menubar*/
+.navy{
+    top: 3rem;
+    position: absolute;
+    background-color: white;
+    padding: 0.8rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 0 0 12px 12px;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-120%);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    box-shadow: 2px 2px 2px var(--borders);
+}
+
+.navy.open{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+
+.alignNav{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-bottom: 1px solid var(--borders);
+    padding: 0.8rem;
+}
+
+.navLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.navCTAs{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.navCTAs button{
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.navCTAs:first-child{
+    background-color: var(--background);
+    box-shadow: 2px 2px 2px var(--borders);
+}
+
+.fa-bars{
+    display: none;
+}
+
+
+.menu.active .fa-bars{
+    color: var(--primary);
+}
+
+
+/*responsiveness*/
+@media(max-width:540px){
+    .navCTA{
+        display: none;
+    }
+    .navLinks{
+        display: none;
+    }
+    nav{
+        padding: 0.8rem;
+    }
+
+    .fa-bars{
+        display:block;
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,143 @@
+.about{
+    background: linear-gradient(135deg, #fff5f0 0%, #fffbf7 100%);
+    border-bottom: 1px solid var(--borders);
+}
+
+.mission {
+    background: var(--background);
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.aboutCard {
+    background: var(--cards);
+    border: 1px solid var(--borders);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.aboutCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(249, 115, 22, 0.12);
+    border-color: var(--primary);
+}
+
+.aboutIcon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.aboutCard h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-text);
+}
+
+.aboutCard p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--second-text);
+}
+
+/* Stats Section */
+.stats {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    padding: 2rem 0;
+}
+
+.stats .alignPopular {
+    padding: 2rem 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.statCard {
+    padding: 1.5rem;
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: Playfair Display;
+    min-height: 3rem;
+    transition: transform 0.4s ease;
+}
+
+.statCard:hover .statNumber {
+    transform: scale(1.04);
+}
+
+.statCard p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Community Section */
+.team {
+    text-align: center;
+}
+
+.centered {
+    max-width: 35rem;
+    margin: 1.2rem auto;
+    text-align: center;
+}
+
+.ctaRow {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.ctaRow button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.team .section-title span {
+    color: var(--primary);
+}
+
+/* responsiveness */
+@media (max-width: 540px) {
+    .aboutGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ctaRow {
+        flex-direction: column;
+        align-items: center;
+    }
+}

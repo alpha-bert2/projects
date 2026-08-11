@@ -1,0 +1,142 @@
+.mainCard{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    opacity: 0;
+    animation: cardFadeUp 0.6s ease forwards;
+}
+
+.mainCard:hover{
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 1rem 1.8rem rgba(0, 0, 0, 0.18);
+}
+
+.recipeImage{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mainCard:hover .recipeImage{
+    transform: scale(1.08);
+}
+
+.cardImage{
+    display: block;
+    max-height: 14rem;
+    overflow: hidden;
+}
+
+.cardDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+
+    button{
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 12px;
+        font-family: DM sans;
+        font-size: 0.975rem;
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+    }
+
+    h2{
+        font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    }
+}
+
+.caty{
+    display: flex;
+    box-shadow: 2px 2px 2px var(--borders);
+    padding: 0 0 0.4rem 0;
+    span{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        
+    }
+}
+.country{
+    border-left: 1px solid var(--borders);
+}
+.Cardcta{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.favoriteButton{
+    padding: 0.8rem 1rem;
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.favoriteButton:hover{
+    color: #ea580c;
+}
+
+.favoriteHeart{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.favoriteHeart.pulse{
+    animation: heartPop 0.25s ease;
+}
+
+.view{
+    background-color: var(--primary);
+    color: white;
+    p{
+        color: white;
+    }
+}
+
+.save:hover i
+{
+    color: white;
+}
+.result {
+    margin-bottom: 0.8rem;
+}
+
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
