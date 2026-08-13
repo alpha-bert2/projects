@@ -34,40 +34,25 @@ h1,h2,h3,h4,h5,h6{
   font-family: Playfair Display;
 }
 
-button::before{
-  content: "";
-  height: 100%;
-  width: 0;
-  position: absolute;
-  z-index: -1;
-  background-color: var(--primary-hover);
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-  box-shadow: 2px 2px 2px var(--borders);
-}
-
-button:hover::before{
-  width: 100%;
-}
-
-button:hover{
-  color: white;
-  transform: scale(1.05);
+button:active{
+  transform: scale(0.95);
+  filter: brightness(0.9);
 }
 
 button{
-  position: relative;
-  z-index: 1;
-  overflow: hidden; 
   font-weight: 500;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 button:active{
   transform: scale(0.95);
   filter: brightness(0.9);
+}
+
+button:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 .pageTransition {

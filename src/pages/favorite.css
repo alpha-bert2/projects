@@ -7,7 +7,7 @@
 .recipe-grid{
     display: flex;
     gap: 0.8rem;
-    
+    flex-wrap: wrap;    
 }
 
 .favtitle{

@@ -1,0 +1,7 @@
+.signIn-wrap{display:flex;align-items:center;justify-content:center;padding:1rem}
+.signIn-form{width:320px;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(23,23,23,0.08)}
+.signIn-form h3{margin:0 0 10px}
+.signIn-form label{display:block;font-size:14px;margin:10px 0}
+.signIn-form input{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;margin-top:6px}
+.si-submit{margin-top:12px;background:#ff6b6b;color:#fff;border:none;padding:10px 14px;border-radius:6px;cursor:pointer}
+.si-error{color:#b00020;font-size:13px;margin-bottom:6px}

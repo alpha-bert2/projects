@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import cook from "../assets/favicon.svg"
 import { Link, NavLink } from "react-router-dom";
-import "./nav.css"
+import "./nav.css";
+import recipee from "../assets/recipee.png"
 
 function Navbar(){
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,8 +30,7 @@ function Navbar(){
     <header className={scrolled ? "scrolled" : ""}>
         <nav>
             <Link to="/home" className="logo" onClick={closeMenu}>
-              <img src={cook} alt="Ucook logo" className="ucook" />
-              <h2>Ucook</h2>                
+                <img src={recipee} alt="logo" className="logoImg"/>             
             </Link>
 
             <span className="navLinks">
@@ -41,12 +41,12 @@ function Navbar(){
             </span>
             
             <span className="navCTA">
-              <button className="first-navCTA">
+              <Link to="/signin" className="first-navCTA" onClick={closeMenu}>
                   Sign in
-              </button>
-              <button className="second-navCTA">
+              </Link>
+              <Link to="/signup" className="second-navCTA" onClick={closeMenu}>
                 Sign up
-              </button>
+              </Link>
             </span>
             <span className={menuOpen ? "menu active" : "menu"}>
                <i className="fa-solid fa-bars" onClick={toogleFaMenu}></i>
@@ -61,12 +61,12 @@ function Navbar(){
                 <NavLink to="/about" className={({ isActive }) => isActive ? "naviLink active" : "naviLink"} onClick={closeMenu}>About</NavLink>
             </span>
             <span className="navCTAs">
-              <button className="first-navCTA">
+              <Link to="/signin" className="first-navCTA">
                   Sign in
-              </button>
-              <button className="second-navCTA">
+              </Link>
+              <Link to="/signup" className="second-navCTA">
                 Sign up
-              </button>
+              </Link>
             </span>
           </span>
 

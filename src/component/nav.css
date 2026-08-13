@@ -43,6 +43,12 @@ nav{
     height: 2rem;
 }
 
+.logoImg{
+    width: 4.5rem;
+    height: 4rem;
+    display: block;
+}
+
 /*nav links css*/
 .navLinks{
     flex: 1;
@@ -99,17 +105,33 @@ nav{
     gap: 0.8rem;
 }
 
-.navCTA button{
+.first-navCTA, .second-navCTA{
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 12px;
     font-family: DM sans;
     font-size: 0.975rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+
 }
 
-.navCTA button:hover {
+.first-navCTA, .second-navCTA:hover{
     transform: scale(1.05);
+    box-shadow: 2px 2px 2px var(--borders);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+ .second-navCTA:active{
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.first-navCTA, .second-navCTA:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 .first-navCTA{

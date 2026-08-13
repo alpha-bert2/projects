@@ -5,6 +5,10 @@ import Recipe from "./pages/recipes.jsx";
 import Favourite from "./pages/favourite.jsx";
 import About from "./pages/about.jsx";
 import RecipeDetails from "./recipeDetails.jsx";
+import Footer from "./component/Footer";
+import SignOut from "./component/SignOut.jsx";
+import SignIn from "./component/SignIn.jsx";
+import SignUp from "./component/SignUp.jsx";
 
 function App(){
   const location = useLocation();
@@ -21,8 +25,11 @@ function App(){
         <Route path="/about" element={<About/>}/>
         <Route path="*" element={<Home/>}/>
         <Route path="/recipe/:idMeal" element={<RecipeDetails />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
+    <Footer />
     </>
   )
 }
